@@ -1,8 +1,8 @@
 # Data Cleaning & Preparation Poject
 
-##Project 1
+## Project 1
 
-##Goal
+## Goal
 Clean a raw orders dataset by handling missing values, duplicates and incorrect data.
 
 ## What I did
