@@ -273,3 +273,58 @@ ORDER BY order_year;
 4. Credit Card orders are the largest on average, and Instagram is the top referral source.
 5. Revenue fell about 8% from 2023 to 2024 even though orders rose, because the average order value dropped.
 
+# Project 4
+
+## Goal
+Create clear visual representations of data to communicate insights, by  choosing the right chart for each question and highlighting the key findings.
+
+## Dataset
+- Records: 1,200 orders
+- Period: January 2023 to June 2025 (2025 covers six months only)
+- Data quality: no duplicate orders and no missing values, apart from blank coupon codes(orders with no coupon)
+
+## Tools
+- Power BI Desktop(Power Query for cleaning, DAX for measures)
+- Excel(source data)
+
+## Data Preparation(Power Query)
+- Replaced blank CouponCode with No Coupon
+- Checked and set data types(Date, decimal prices)
+- Removed columns not used in the analysis (TrackingNumber, ShippingAddress)
+
+## DAX Measures
+
+| Measure | Definition |
+| --- | --- |
+| Total Orders | Count of all orders |
+| Net Revenue | Sum of TotalPrice for Delivered and Shipped orders |
+| Lost Revenue | Sum of TotalPrice for Cancelled and Returned orders |
+| Cancel/Return Rate | Cancelled and Returned orders as a share of all orders |
+| Avg Order Value | Net Revenue divided by the number of Delivered and Shipped orders |
+
+Pending orders are not counted in Net Revenue or Lost Revenue because their outcome is unresolved. 
+
+## Dashboard Contents
+- KPI cards: Net Revenue, Lost Revenue, Total Orders, Cancel/Return Rate
+- Line chart: Net vs lost revenue by moonth
+- Donut charts: order status breakdown, orders by payment method
+- Bar charts: net revenue by product, net revenue by referral source
+- Stacked column chart: orders by product and status
+- Column chart: orders by coupon code
+- Slicer: Year, Product, Order Status
+Blue is used for revenue kept and orange is for revenue lost, so the problem areas stand out
+
+## Key Insights
+1. Lost revenue (519.7k) exceeds net revenue (488.8k): 41% of orders are cancelled or returned.
+2. It's getting worse: 46.8% cancel/return rate in Jan - Jun 2025 vs 39.2% in 2024.
+3. Online payments perform best (35%); Gift card and Credit Card are worst (about 44%).
+4. Instagram is the best channel (108K net, 37% rate); Facebook and Email lose the most (115K, 114K).
+5. Monitors and tablets lose more than they earn.
+
+## Skills Demonstrated 
+Data cleaning, DAX measure, choosing appropriate chart types, dashboard design, story telling with data.
+
+
+# Author: John Etoh
+
+
